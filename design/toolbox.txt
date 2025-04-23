@@ -1,0 +1,47 @@
+it has Categories :3
+
+
+Motion:
+	Mode forward x steps
+	Turn left x degrees
+	Turn right x degrees
+
+	
+	Go to x y
+	Set Y to x
+	Set Y to y
+
+
+
+Graphics:
+	
+Audio:
+
+Control:
+	if
+	else
+	elif
+	While true
+	For i
+	Repeat x times
+
+Events:
+	When project started
+	When sprite clicked
+	When key pressed
+	When I start as clone	
+	
+Input:
+	Key x pressed
+	Mouse down
+	Mouse position
+	input
+	
+Logic:
+	Addition
+	Subtraction
+	Multiply
+	Divide
+	Modulo
+
+Variables:

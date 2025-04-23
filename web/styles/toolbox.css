@@ -1,0 +1,51 @@
+.toolbox-headers-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.toolbox-header {
+    text-align: center;
+    background-color: #ddd;
+    color: #333;
+    padding: 12px 10px 12px 10px;
+    flex: 1;
+    cursor: pointer;
+}
+
+.toolbox-header:hover {
+    background-color: #ccc;
+}
+
+.toolbox-header-selected {
+    background-color: #ccc;
+}
+
+/* Code  snippets */
+
+.toolbox-code-category {
+    border-left: 4px solid;
+    padding-left: 8px;
+    margin: 0px;
+    margin-left: 2px;
+}
+
+.toolbox-code-category-header {
+    cursor: pointer;
+}
+
+.toolbox-code-category-content {
+    display: none; /* Hidden until category clicked */
+    overflow: hidden;
+    transition-duration: 0.2s;
+}
+
+.toolbox-insert-code {
+    margin: 2px;
+    padding: 8px;
+}
+
+.toolbox-insert-code:hover {
+    background-color: var(--toolbox-background-hover-color);
+    cursor: pointer;
+}

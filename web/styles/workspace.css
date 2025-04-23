@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url("/styles/toolbox.css");
+
+/* Variables */
+
+:root {
+    --text-color: #111;
+    --border-color: #534A77;
+
+    --background-color: #eee;
+    --background-color-hover: #ccc;
+    --toolbox-background-color: #eee;
+    --toolbox-background-hover-color: #ccc;
+
+    --control-button-background-color: #eee;
+    --icon-color: #444;
+
+    --header-color: #160e1a;
+    --button-text-color: #eee;
+    --button-color: #362b3b;
+    --button-color-hover: #976583;
+
+    --actor-selected-color: #a191a9;
+
+    --console-text-color: #444;
+  }
+
+
+html, body {
+    height: 100%;
+    margin: 0px;
+    background-color: var(--background-color);
+    overflow: hidden;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text-color);
+}
+  
+/* Globals */
+
+.container {
+    margin: 0px;
+    padding: 0px;
+}
+
+.vl {
+    border-left: 6px solid var(--border-color);
+    padding-left: 8px;
+    height: 22px;
+  }
+  
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Page */
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+}
+
+.header-toolbar {
+    display: flex;
+    background-color: var(--header-color);
+}
+
+.workspace-container {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    flex: 1;
+}
+
+/* Header */
+
+.save-button-container {
+    
+}
+
+.load-button-container {
+
+}
+
+.header-button {
+    border: none;
+    padding: 15px 25px;
+    cursor: pointer;
+    transition-duration: 100ms;
+    background-color: var(--button-color);
+    font-weight: bold;
+    color: var(--button-text-color);
+}
+
+.header-button:hover {
+    background-color: var(--button-color-hover);
+}
+
+/* Workspace */
+
+.toolbox-container {
+    background-color: var(--toolbox-background-color);
+    border-right: var(--border-color) solid 1px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: calc(100vh - 46px);
+    height: 100%;
+    flex: 1.5;
+    min-width: 220px;
+}
+
+.editor-container {
+    background-color: beige;
+    height: 100%;
+    flex: 5;
+}
+
+.management-panel {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding-left: 10px;
+    border-left: var(--border-color) solid 1px;
+    margin-right: 5px;
+}
+
+/* code editor */
+
+#editor {
+    width: 100%;
+    height: 100%;
+}
+
+/* management panel */
+
+.output-container {
+    background-color: var(--background-color);
+}
+
+.actor-collection-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--background-color-hover);
+    width: 480px;
+    height: 100%;
+    max-height: calc(100vh - 560px);
+    border: var(--border-color) solid 1px;
+    gap: 10px;
+    flex: 1;
+    overflow-y: auto;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.canvas-output-container {
+
+}
+
+.console-output-container {
+    width: 100%;
+    height: 80px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    padding: 5px;
+    border: var(--border-color) solid 1px;
+    background-color: var(--background-color-hover);
+    border-radius: 5px;
+}
+
+.project-controls-container {
+    display: flex;
+}
+
+/* Project Controls */
+
+.project-control-button {
+    width: 28px;
+    height: 28px;
+    padding: 6px;
+    margin: 6px;
+    margin-left: 0px;
+    background-color: var(--control-button-background-color);
+    color: var(--icon-color);
+    font-size: 24px;
+    text-align:center;
+    border: var(--border-color) solid 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 100ms;
+}
+
+.project-control-button:hover {
+    background-color: var(--background-color-hover);
+}
+
+.control-spacer {
+    flex: 1;
+}
+
+/* Canvas Output */
+#canvas-output {
+    border:1px solid var(--border-color);
+    border-radius: 4px;
+    width: 480px;
+    height: 360px;
+    background-color: #fff;
+}
+
+/* Code input window */
+
+/* Output Log */
+
+.console-output-container {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    
+    color: var(--console-text-color);
+}
+
+.console-error {
+    background-color: #ed8080;
+    color: #310e0e;
+}
+
+/* Actor Collection */
+
+.actor-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    width: 100px;
+    height: 120px;
+    border: var(--border-color) solid 1px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.actor-selected {
+    background-color: var(--actor-selected-color);
+}
+
+.actor-image {
+    height: auto;
+    max-height: 80px;
+    max-width: 80px;
+    margin: 10px;
+    margin-bottom: 5px;
+    background-color: #000;
+    border-radius: 2px;
+    flex: 1;
+}
+
+.actor-label {
+    margin: 0px;
+}

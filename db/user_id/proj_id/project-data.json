@@ -1,0 +1,19 @@
+{
+    "name": "My Project",
+    "project-type": "2d",
+    "main-script": {
+        "code": "ZGVmIG9uX3N0YXJ0KHNlbGYpOg0KICAgICMgVGhlIGNvZGUgeW91IGFkZCBoZXJlIHdpbGwgZXhlY3V0ZSBldmVyeSB0aW1lIHlvdSBzdGFydCB5b3VyIHByb2plY3QNCiAgICBwYXNzDQoNCmRlZiBsb29wKHNlbGYpOg0KICAgICMgVGhlIGNvZGUgaGVyZSB3aWxsIHJ1biBldmVyeSBmcmFtZSBhZnRlciB5b3VyIHByb2plY3Qgc3RhcnRzDQogICAgcGFzcw=="
+    },
+    "actors": {
+        "My Actor": {
+            "x": 240,
+            "y": 180,
+            "direction": 0,
+            "scale": 1,
+            "costume-number": 0,
+            "hierchy": 0,
+            "code": "",
+            "costumes": {"lollipop":"lollipop.png"}
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "My Project",
+    "project-type": "2d",
+    "actors": {
+        "My Actor": {
+            "x": 240,
+            "y": 180,
+            "direction": 0,
+            "scale": 1,
+            "costume-number": 0,
+            "hierchy": 0,
+            "code": "ZGVmIG9uX3N0YXJ0KHNlbGYpOgogICAgIyBUaGUgY29kZSB5b3UgYWRkIGhlcmUgd2lsbCBleGVjdXRlIHdoZW4geW91IHJ1biB5b3VyIHByb2plY3QhCiAgICBwYXNz",
+            "costumes": {"lollipop":"lollipop.png"}
+        } 
+    }
+}

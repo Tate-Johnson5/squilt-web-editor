@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Squilt</title>
+
+        <link rel="stylesheet" href="/styles/workspace.css">
+
+        <!--Modules-->
+        <script src="/scripts/workspace_management.js" type="module"></script>
+        <script src="/scripts/workspace/toolbox.js" type="module"></script>
+        
+        <script src="/scripts/project_management.js" type="module"></script>
+
+        <script src="/scripts/code_management.js" type="module"></script>
+        <script src="/scripts/code/compile_actor.js" type="module"></script>
+
+    </head>
+    <body onload="brython()">
+        
+        <div class="page-container container">
+            <!--Header-->
+            <div class="header-toolbar">
+                <div class="save-button-container">
+                    <button class="header-button noselect" id="save-button">Save</button>
+                </div>
+                <div class="load-button-container">
+                    <button class="header-button noselect" id="load-button">Load</button>
+                </div>
+            </div>
+
+            <!--Workspace-->
+            <div class="workspace-container">
+
+                <!--Toolbox-->
+                
+                <div class="toolbox-container container">
+                    <div class="toolbox-headers-container">
+                        <div class="toolbox-header toolbox-header-selected">Code</div>
+                        <div class="toolbox-header">Costumes</div>
+                        <div class="toolbox-header">Sounds</div>
+                    </div>
+
+                    <div class="toolbox-code-container" id="toolbox-code-container">
+                        <p class="vl">Code Toolbox</p>
+                        <!--Contents are added here-->
+                    </div>
+
+                    <div class="toolbox-code-container " id="toolbox-code-container"></div>
+                    <div class="toolbox-costumes-container" id="toolbox-costumes-container"></div>
+                    <div class="toolbox-sounds-container" id="toolbox-sounds-container"></div>
+                </div>
+
+                <!--Code Editor-->
+                <div class="editor-container container">
+                    <div id="editor"></div>
+                </div>
+
+                <!--Management panel-->
+                <div class="management-panel container">
+                    <div class="output-container container">
+                        <!--Control buttons-->
+                        <div class="project-controls-container">
+                            <div class="project-control-button" id="run-button">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="project-control-button" id="stop-button">
+                                <i class="fa-solid fa-stop"></i>
+                            </div>
+
+                            <div class="control-spacer"></div>
+
+                            <div class="project-control-button" id="shrink-screen">
+                                <i class="fa-solid fa-down-left-and-up-right-to-center"></i>
+                            </div>
+                            <div class="project-control-button" id="expand-screen">
+                                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                            </div>
+                        </div>
+                        <!--Canvas-->
+                        <div class="canvas-output-container">
+                            <canvas id="canvas-output" width="480" height="360"></canvas>
+                        </div>
+                        <!--Console-->
+                        <div class="console-output-container">
+                            <div id="console-output">
+                                <span>Console will output here</span>
+                            </div>
+                        </div>
+                            
+                        <!--Main script-->
+                        <div class="actor-collection-container container" id="actor-collection-container">
+
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Ace (code editor)-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.39.1/ace.js"></script>
+        <script>
+            // Setup ace editor and some functions to use it
+            var editor = ace.edit("editor");
+            editor.setTheme("ace/theme/tomorrow");
+            // cool themes: tomorrow_night pastel_on_dark one_dark nord_dark chaos 
+            editor.session.setMode("ace/mode/python");
+
+            // functions to use in modules
+            function insert_code(code) { 
+                editor.insert(code);
+            }
+            function set_editor_code_to(code) { 
+                editor.setValue(code);
+            }
+            function get_editor_code() { 
+                return editor.getValue();
+            }
+        </script>
+
+        <!--Font Awesome-->
+        <script src="https://kit.fontawesome.com/e75762dd40.js" crossorigin="anonymous"></script>
+
+        <!--Brython (code interpreter)-->
+        <script src="https://cdn.jsdelivr.net/npm/brython@3.8.9/brython.min.js"> </script> 
+        <script src="https://cdn.jsdelivr.net/npm/brython@3.8.9/brython_stdlib.js"> </script>
+        <!--Brython runner-->
+        <script src="https://cdn.jsdelivr.net/gh/pythonpad/brython-runner/lib/brython-runner.bundle.js"></script>
+    
+        <!--Main script-->
+        <script src="/scripts/main.js" type="module"></script>
+
+        <script>
+            // canvas code
+            const canvas = document.getElementById("canvas-output");
+
+        </script>
+
+    </body>
+</html>

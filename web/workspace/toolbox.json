@@ -1,0 +1,224 @@
+{
+    "categories": {
+        "movement": {
+            "title": "Movement",
+            "id": "movement",
+            "color": "332dab",
+            "items": {
+                "go-to": {
+                    "title": "Go to position",
+                    "code": "self.x, self.y = (0, 0)"
+                },
+                "change-x": {
+                    "title": "Change X position",
+                    "code": "self.x += 10"
+                },
+                "change-y": {
+                    "title": "Change Y position",
+                    "code": "self.y += 10"
+                },
+                "direction": {
+                    "title": "Point in direction",
+                    "code": "self.direction = 90"
+                },
+                "turn": {
+                    "title": "Turn",
+                    "code": "self.direction += 15"
+                },
+                "step-forward": {
+                    "title": "Step forward",
+                    "code": "self.step_forward(10)"
+                }
+            }
+        },
+        "graphics": {
+            "title": "Graphics",
+            "id": "graphics",
+            "color": "9747c9",
+            "items": {
+                "show": {
+                    "title": "Show Actor",
+                    "code": "self.show()"
+                },
+                "hide": {
+                    "title": "Hide Actor",
+                    "code": "self.hide()"
+                },
+                "set-size": {
+                    "title": "Set size to",
+                    "code": "self.scale = 1"
+                },
+                "change-size": {
+                    "title": "Change size by",
+                    "code": "self.scale += 0.1"
+                }
+            }
+        },
+        "audio": {
+            "title": "Audio",
+            "id": "audio",
+            "color": "c0488e",
+            "items": {
+                "playsound": {
+                    "title": "Play sound <name>",
+                    "code": "self.playsound(\"<name>\")",
+                    "variables":{
+                        "name": "pop"
+                    }
+                },
+                "stop-all-sounds": {
+                    "title": "Stop all sounds",
+                    "code": "stop_all_sounds()"
+                },
+                "set-volume": {
+                    "title": "Set volume to <amount>",
+                    "code": "self.volume = <amount>",
+                    "variables":{
+                        "amount": "1"
+                    }
+                },
+                "change-volume": {
+                    "title": "Change volume by <amount>",
+                    "code": "self.volume += <amount>",
+                    "variables":{
+                        "amount": "0.1"
+                    }
+                }
+            }
+        },
+        "control": {
+            "title": "Control",
+            "id": "control",
+            "color": "c96a6a",
+            "items": {
+                "if": {
+                    "title": "If",
+                    "code": "if False:\n    "
+                },
+                "else": {
+                    "title": "Else",
+                    "code": "else:\n    "
+                },
+                "elif": {
+                    "title": "Elif",
+                    "code": "elif False:\n    "
+                },
+                "while": {
+                    "title": "Repeat while",
+                    "code": "while False:\n    "
+                },
+                "for": {
+                    "title": "For",
+                    "code": "for i in []:\n    "
+                },
+                "repeat-x-times": {
+                    "title": "Repeat <amount> times",
+                    "code": "for i in range(<amount>):\n    ",
+                    "variables":{
+                        "amount": "10"
+                    }
+                },
+                "create-clone": {
+                    "title": "Create clone of <clone>",
+                    "code": "<clone>.create_clone()",
+                    "variables":{
+                        "clone": "self"
+                    }
+                }
+            }
+        },
+        "events": {
+            "title": "Events",
+            "id": "events",
+            "color": "b99350",
+            "items": {
+                "on-start": {
+                    "title": "On start",
+                    "code": "def on_start(self):\n    "
+                },
+                "loop": {
+                    "title": "Loop",
+                    "code": "def loop(self):\n    "
+                },
+                "on-click": {
+                    "title": "On actor click",
+                    "code": "def on_actor_click(self, event):\n    "
+                },
+                "on-key": {
+                    "title": "When key pressed",
+                    "code": "def on_key_pressed(self, event):\n    "
+                }
+            }
+        },
+        "input": {
+            "title": "Input",
+            "id": "input",
+            "color": "67acda",
+            "items": {
+
+            }
+        },
+        "logic": {
+            "title": "Logic",
+            "id": "logic",
+            "color": "31af55",
+            "items": {
+                
+            }
+        },
+        "variables": {
+            "title": "Variables",
+            "id": "variables",
+            "color": "d76f43",
+            "items": {
+                "create-variable": {
+                    "title": "Create Variable",
+                    "code": "self.my_variable = 0"
+                },
+                "reference-self-variable": {
+                    "title": "Reference variable",
+                    "code": "self.my_variable"
+                },
+                "reference-global-variable": {
+                    "title": "Reference global variable",
+                    "code": "my_variable"
+                },
+                "reference-external-variable": {
+                    "title": "Reference variable from actor",
+                    "code": "actor.my_variable"
+                }
+            }
+        },
+        "functions": {
+            "title": "Functions",
+            "id": "functions",
+            "color": "46074f",
+            "items": {
+                "create-function": {
+                    "title": "Create Function",
+                    "code": "def my_function(self):\n    "
+                },
+                "call-function": {
+                    "title": "Call Function",
+                    "code": "self.my_function()"
+                },
+                "call-global-function": {
+                    "title": "Call global function",
+                    "code": "my_function()"
+                },
+                "call-external-function": {
+                    "title": "Call function from actor",
+                    "code": "actor.my_function()"
+                }
+            }
+        },
+        "draw": {
+            "title": "Draw",
+            "id": "draw",
+            "color": "228769",
+            "items": {
+                
+            }
+        }       
+    }
+}

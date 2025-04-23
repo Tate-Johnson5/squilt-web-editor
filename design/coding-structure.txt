@@ -1,0 +1,1 @@
+each sprite is a class. the class info is hidden and the user writes 
